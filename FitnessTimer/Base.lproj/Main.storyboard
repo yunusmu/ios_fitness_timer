@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,22 +35,75 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDN-0d-VhM">
+                                <rect key="frame" x="267" y="364" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.89800167680486176" blue="0.25083284680577156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fC7-I9-9G9"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" minValue="5" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="AlS-vc-rph">
+                                <rect key="frame" x="128" y="364" width="118" height="31"/>
+                                <connections>
+                                    <action selector="timerIntervalSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="knt-ed-fN7"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIt-X0-5Zk">
+                                <rect key="frame" x="16" y="369" width="93" height="21"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-gY-UNC">
+                                <rect key="frame" x="180" y="415" width="15.5" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LoN-cU-oBE" firstAttribute="leading" secondItem="Itc-Ek-X32" secondAttribute="trailing" constant="15" id="1BW-jr-y1w"/>
-                            <constraint firstItem="Itc-Ek-X32" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GtT-LU-ps0"/>
-                            <constraint firstItem="LoN-cU-oBE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UZp-tm-ezO"/>
-                            <constraint firstItem="Itc-Ek-X32" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dWE-7h-g1m"/>
+                            <constraint firstItem="Itc-Ek-X32" firstAttribute="centerX" secondItem="AlS-vc-rph" secondAttribute="centerX" id="0UZ-QQ-XVn"/>
+                            <constraint firstItem="oDN-0d-VhM" firstAttribute="leading" secondItem="AlS-vc-rph" secondAttribute="trailing" constant="23" id="7rj-cm-ICj"/>
+                            <constraint firstItem="LoN-cU-oBE" firstAttribute="centerX" secondItem="oDN-0d-VhM" secondAttribute="centerX" id="FgA-in-HC0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oDN-0d-VhM" secondAttribute="trailing" constant="46" id="GY6-UO-rc6"/>
+                            <constraint firstItem="vpL-gY-UNC" firstAttribute="top" secondItem="AlS-vc-rph" secondAttribute="bottom" constant="21" id="JB4-Vx-X6G"/>
+                            <constraint firstItem="AlS-vc-rph" firstAttribute="top" secondItem="oDN-0d-VhM" secondAttribute="top" id="JaV-mS-6AK"/>
+                            <constraint firstItem="AlS-vc-rph" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K37-ZC-0MY"/>
+                            <constraint firstItem="ZIt-X0-5Zk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MkE-ye-DOA"/>
+                            <constraint firstItem="ZIt-X0-5Zk" firstAttribute="centerY" secondItem="AlS-vc-rph" secondAttribute="centerY" id="aIa-VN-H2v"/>
+                            <constraint firstItem="AlS-vc-rph" firstAttribute="leading" secondItem="ZIt-X0-5Zk" secondAttribute="trailing" constant="21" id="ceA-cb-v5k"/>
+                            <constraint firstItem="Itc-Ek-X32" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d00-WC-T5P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LoN-cU-oBE" secondAttribute="trailing" constant="47" id="ijM-xi-3pc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AlS-vc-rph" secondAttribute="bottom" constant="273" id="jce-1B-DFL"/>
+                            <constraint firstItem="Itc-Ek-X32" firstAttribute="top" secondItem="LoN-cU-oBE" secondAttribute="top" id="qGj-IO-Cqr"/>
+                            <constraint firstItem="vpL-gY-UNC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rts-08-wip"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZIt-X0-5Zk" secondAttribute="bottom" constant="277" id="wzZ-Yl-F5Z"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="vpL-gY-UNC" id="hSR-aa-BZn"/>
                         <outlet property="inputField" destination="Itc-Ek-X32" id="iA1-wG-D5U"/>
                         <outlet property="speakButton" destination="LoN-cU-oBE" id="e6q-X1-WRW"/>
+                        <outlet property="timerIntervalSlider" destination="AlS-vc-rph" id="wze-vM-j4T"/>
+                        <outlet property="timerIntervalValueLabel" destination="ZIt-X0-5Zk" id="1Sd-8s-QOw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="17.5" y="47.5"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

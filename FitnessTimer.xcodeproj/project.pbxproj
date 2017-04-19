@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A2E7681EA77E18001A1852 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2E7671EA77E18001A1852 /* ViewController.m */; };
 		7C4A790C1EA6B9D200C33CCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A790B1EA6B9D200C33CCC /* main.m */; };
 		7C4A790F1EA6B9D200C33CCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A790E1EA6B9D200C33CCC /* AppDelegate.m */; };
 		7C4A79151EA6B9D200C33CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A79131EA6B9D200C33CCC /* Main.storyboard */; };
 		7C4A79171EA6B9D200C33CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A79161EA6B9D200C33CCC /* Assets.xcassets */; };
 		7C4A791A1EA6B9D200C33CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A79181EA6B9D200C33CCC /* LaunchScreen.storyboard */; };
-		7C4A79231EA6C1FE00C33CCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A79221EA6C1FE00C33CCC /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49A2E7661EA77E18001A1852 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		49A2E7671EA77E18001A1852 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7C4A79071EA6B9D200C33CCC /* FitnessTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4A790B1EA6B9D200C33CCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C4A790D1EA6B9D200C33CCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -24,8 +26,6 @@
 		7C4A79161EA6B9D200C33CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4A79191EA6B9D200C33CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4A791B1EA6B9D200C33CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C4A79211EA6C1FE00C33CCC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7C4A79221EA6C1FE00C33CCC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 		7C4A79091EA6B9D200C33CCC /* FitnessTimer */ = {
 			isa = PBXGroup;
 			children = (
-				7C4A79211EA6C1FE00C33CCC /* ViewController.h */,
-				7C4A79221EA6C1FE00C33CCC /* ViewController.m */,
+				49A2E7661EA77E18001A1852 /* ViewController.h */,
+				49A2E7671EA77E18001A1852 /* ViewController.m */,
 				7C4A790D1EA6B9D200C33CCC /* AppDelegate.h */,
 				7C4A790E1EA6B9D200C33CCC /* AppDelegate.m */,
 				7C4A79131EA6B9D200C33CCC /* Main.storyboard */,
@@ -110,7 +110,7 @@
 				TargetAttributes = {
 					7C4A79061EA6B9D200C33CCC = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = A62869KGKP;
+						DevelopmentTeam = AET8A49LYW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C4A79231EA6C1FE00C33CCC /* ViewController.m in Sources */,
+				49A2E7681EA77E18001A1852 /* ViewController.m in Sources */,
 				7C4A790F1EA6B9D200C33CCC /* AppDelegate.m in Sources */,
 				7C4A790C1EA6B9D200C33CCC /* main.m in Sources */,
 			);
@@ -275,10 +275,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A62869KGKP;
+				DEVELOPMENT_TEAM = AET8A49LYW;
 				INFOPLIST_FILE = FitnessTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.josephappstr.FitnessTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephappstr.myfitnesstimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -287,10 +287,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A62869KGKP;
+				DEVELOPMENT_TEAM = AET8A49LYW;
 				INFOPLIST_FILE = FitnessTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.josephappstr.FitnessTimer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.josephappstr.myfitnesstimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -314,6 +314,7 @@
 				7C4A79201EA6B9D200C33CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
